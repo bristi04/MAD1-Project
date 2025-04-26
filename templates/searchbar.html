@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <form action="" method="GET">
+              <div class="input-group">
+                <select name="parameter" id="parameter" class="parameter" form-select*>
+                   {% for parameter in parameters %}
+                     {% if param and parameter==param %}
+                          <option value="{{parameter}}" selected>{{parameters[parameter]}}</option>
+                     {% else %}  
+                          <option value="{{parameter}}">{{parameters[parameter]}}</option>    
+                     {% endif %}
+                   {% endfor %}
+                </select>
+                <input type="text" 
+                value="{{query}}"
+                name="query" class="form-control" placeholder="Search for..">
+                <span class="input-group-btn">
+                <button class="btn btn-primary" type="submit">Search</button>
+                </span>
+                </div>
+            </form>
+        </div>
+    </div> 
+</div>
+
+<style>
+    .input-group{
+        margin-right : 50px,
+        margin-left: 50px,
+    }
+</style>
